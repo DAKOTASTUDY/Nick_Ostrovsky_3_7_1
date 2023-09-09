@@ -4,21 +4,23 @@
 #include <iostream>
 
 #define MODE 1
-
-
+#if MODE == 1
 int add(int a, int b)
 {
     return a + b;
 }
+#endif
+
 int main()
 {
     int j, k;
-    std::cout << "Hello World!\n";
+  
 #ifndef MODE
 
 #error ERROR
 #endif
 #if MODE == 1
+
     
         std::cout << "\n\t" << " ASSAULT MODE ON:  " << std::endl;
         std::cout << "\n\t" << " Please, enter a:  " << std::endl;
@@ -26,7 +28,7 @@ int main()
         std::cout << "\n\t" << " Please, enter b:  " << std::endl;
         std::cin >> k;
         std::cout << "\n\t" << add(j, k) << std::endl;
-        
+       
     
 #elif MODE == 0
     
